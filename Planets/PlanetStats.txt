@@ -1,0 +1,63 @@
+ [Mercury]
+0.8
+Radius: 1,516 mi
+Length of day: 58d 15h 30m
+Distance from Sun: 35.98 million mi
+Orbital period: 88 days
+Average surface temp: 800 °F [Mercury]
+
+ [Venus]
+0.7
+Radius: 3,760 mi
+Length of day: 116d 18h 0m
+Distance from Sun: 67.24 million mi
+Orbital period: 224.701 days
+Average surface temp: 864 °F [Venus]
+
+ [Earth]
+0.6
+Radius: 3,959 mi
+Length of day: 24 hours
+Distance from Sun: 92.96 million mi
+Orbital period: 365 days
+Average surface temp: 59 °F [Earth]
+
+ [Mars]
+0.5
+Radius: 2,106 mi
+Length of day: 1d 0h 40m
+Distance from Sun: 141.6 million mi
+Orbital period: 687 days
+Average surface temp: -80 °F [Mars]
+
+ [Jupiter]
+0.4
+Radius: 43,441 mi
+Length of day: 0d 9h 56m
+Distance from Sun: 483.8 million mi
+Orbital period: 11.86 years
+Average surface temp: -234 °F [Jupiter]
+
+ [Saturn]
+0.3
+Radius: 36,184 mi
+Length of day: 0d 10h 42m
+Distance from Sun: 888.2 million mi
+Orbital period: 29.5 years
+Average surface temp: -288 °F [Saturn]
+
+ [Uranus]
+0.2
+Radius: 15,759 mi
+Length of day: 0d 17h 14m
+Distance from Sun: 1.784 billion mi
+Orbital period: 84 years
+Average surface temp: -357 °F [Uranus]
+
+ [Neptune]
+0.1
+Radius: 15,299 mi
+Length of day: 0d 16h 6m
+Distance from Sun: 2.795 billion mi
+Orbital period: 165 years
+Average surface temp: -353 °F [Neptune]
