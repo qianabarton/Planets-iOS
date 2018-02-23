@@ -20,13 +20,13 @@ class GameViewController: UIViewController {
     
     var scnScene: SCNScene!
     var cameraNode: SCNNode!
-    var light: SCNNode!
-    var lightNode: SCNNode!
+
     var planetNode: SCNNode!
     var sunNode: SCNNode!
+    var omni: SCNLight!
     
-    var planet = "Mercury"
-    var sunSize = 0.8
+    var planet = "Earth"
+    var omniIntensity = 1400
     var menuVisible = false
     
     
@@ -58,23 +58,25 @@ class GameViewController: UIViewController {
     }
     
     func setupLight(){
-        // ambient light
+        let omniNode = SCNNode()
+        omniNode.position = SCNVector3(x: 3, y: 2, z: 3)
+
+        omni = SCNLight()
+        omniNode.light = omni
+        omni.type = SCNLight.LightType.omni
+        omni.intensity = CGFloat(omniIntensity)
+        omni.color = UIColor.white
+        scnScene.rootNode.addChildNode(omniNode)
+        
+        let ambientNode = SCNNode()
+        ambientNode.position = SCNVector3(x: 0, y: 0, z: 0)
+        
         let ambient = SCNLight()
+        ambientNode.light = ambient
         ambient.type = SCNLight.LightType.ambient
         ambient.color = UIColor.white
-        ambient.intensity = 200
-        self.cameraNode.light = ambient
-        
-        // omni-directional light
-        let omni =  SCNLight()
-        omni.type = SCNLight.LightType.omni
-        omni.intensity = 1200
-        
-        lightNode = SCNNode()
-        lightNode.light = omni
-        lightNode.position = SCNVector3(x: -2, y: 2, z: 5)
-        
-        scnScene.rootNode.addChildNode(lightNode)
+        ambient.intensity = 700
+        scnScene.rootNode.addChildNode(ambientNode)
     }
     
     func setupCamera() {
@@ -86,13 +88,13 @@ class GameViewController: UIViewController {
     }
     
     func setupSun(){
-        let ball = SCNSphere(radius: CGFloat(sunSize))
+        let ball = SCNSphere(radius: 1.0)
         sunNode = SCNNode()
         sunNode.geometry = ball
         sunNode.position = SCNVector3(x: -1, y: 2, z:1.5)
         sunNode.geometry?.firstMaterial?.diffuse.contents = UIColor.orange
         
-        scnScene.rootNode.addChildNode(sunNode)
+        //scnScene.rootNode.addChildNode(sunNode)
     }
     
     func spawnPlanet(planet: String) {
@@ -100,16 +102,23 @@ class GameViewController: UIViewController {
         planetNode = SCNNode()
         planetNode.geometry = ball
         planetNode.position = SCNVector3(x:0, y:0, z:0)
+        
+        planetNode.geometry?.firstMaterial?.ambient.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/ambient.png")
         planetNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/map.png")
-        planetNode.geometry?.firstMaterial?.ambient.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/ambient")
-        planetNode.geometry?.firstMaterial?.ambient.intensity = 200
+        
         planetNode.geometry?.firstMaterial?.normal.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/normal.png")
+        planetNode.geometry?.firstMaterial?.normal.intensity = 0.6
+        
         planetNode.geometry?.firstMaterial?.specular.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/specular.png")
+        planetNode.geometry?.firstMaterial?.specular.intensity = 0.1
+        
+        planetNode.geometry?.firstMaterial?.emission.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/emission.jpg")
         
         let action = SCNAction.rotate(by:720 * CGFloat((.pi)/100.0), around: SCNVector3(x:0, y:1, z:0), duration:60)
+        let repeatAction = SCNAction.repeatForever(action)
         
         scnScene.rootNode.addChildNode(planetNode)
-        planetNode.runAction(action)
+        planetNode.runAction(repeatAction)
     }
 
     @IBAction func menuPressed(_ sender: UIBarButtonItem) {
@@ -150,9 +159,12 @@ class GameViewController: UIViewController {
         planetNode.removeFromParentNode()
         sunNode.removeFromParentNode()
         closeMenu()
+        
         spawnPlanet(planet: planet)
         setLabels(planet: planet)
-        setupSun()
+        //setupSun()
+        omni.intensity = CGFloat(omniIntensity)
+
     }
     
     func setLabels(planet: String){
@@ -170,9 +182,10 @@ class GameViewController: UIViewController {
                 let lines = contents.components(separatedBy: " [" + planet + "]\n")
                 //why
                 let str = lines[1]
-                let sunIndex = str.index(str.startIndex, offsetBy: 3)
+                let sunIndex = str.index(str.startIndex, offsetBy: 4)
                 let returnIndex = str.index(str.startIndex, offsetBy: 4)
-                sunSize = Double(str.substring(to: sunIndex))!
+                omniIntensity = Int(Double(str.substring(to: sunIndex))!)
+                print("omni = \(omniIntensity)")
                 returnString = str.substring(from: returnIndex)
                 //print(returnString)
             }
