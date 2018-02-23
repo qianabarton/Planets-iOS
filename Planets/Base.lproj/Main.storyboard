@@ -29,10 +29,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7A-u4-oxc" userLabel="Mercury">
-                                <rect key="frame" x="16" y="72" width="90" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-aV-IUd">
+                                <rect key="frame" x="16" y="83" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.37458359771573602" green="0.37458359771573602" blue="0.37458359771573602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7A-u4-oxc" userLabel="Mercury">
+                                <rect key="frame" x="16" y="104" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Mercury">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -41,9 +48,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62D-Zk-vCq">
-                                <rect key="frame" x="16" y="110" width="90" height="30"/>
+                                <rect key="frame" x="16" y="138" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Venus">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -52,9 +59,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi0-4I-tc1">
-                                <rect key="frame" x="16" y="148" width="90" height="30"/>
+                                <rect key="frame" x="16" y="172" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Earth">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -63,9 +70,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-3q-DLJ">
-                                <rect key="frame" x="16" y="186" width="90" height="30"/>
+                                <rect key="frame" x="16" y="206" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Mars">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -74,9 +81,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Xq-1XT">
-                                <rect key="frame" x="16" y="224" width="90" height="30"/>
+                                <rect key="frame" x="16" y="240" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Jupiter">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -85,9 +92,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-gB-nGp">
-                                <rect key="frame" x="16" y="262" width="90" height="30"/>
+                                <rect key="frame" x="16" y="274" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Saturn">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -96,9 +103,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-yp-4MJ">
-                                <rect key="frame" x="16" y="300" width="90" height="30"/>
+                                <rect key="frame" x="16" y="308" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Uranus">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -107,9 +114,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-ys-uD4">
-                                <rect key="frame" x="16" y="338" width="90" height="30"/>
+                                <rect key="frame" x="16" y="342" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Neptune">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -117,12 +124,30 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Mwf-wk-Jo8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4k-MX-SBW">
+                                <rect key="frame" x="16" y="400" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYK-zd-Sbo">
+                                <rect key="frame" x="16" y="420" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Sun">
+                                    <color key="titleColor" red="0.54160485579999995" green="0.54160485579999995" blue="0.54160485579999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bEJ-IJ-FXV"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ho-Vm-p7V">
                                 <rect key="frame" x="16" y="534" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="KJ6-8u-iiK" kind="show" id="Oh4-gM-Ta8"/>
@@ -131,9 +156,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYT-uA-bsl">
                                 <rect key="frame" x="16" y="572" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Introduction">
-                                    <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="WGI-WY-64t" kind="presentation" modalPresentationStyle="overCurrentContext" id="Ppg-sK-zCm"/>
@@ -142,9 +167,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-tb-WYf">
                                 <rect key="frame" x="16" y="610" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="About">
-                                    <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="2TO-g5-nhn" kind="show" id="fJn-2A-btc"/>
@@ -157,8 +182,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </sceneKitView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-fK-JCl">
-                                        <rect key="frame" x="16" y="470" width="343" height="113"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-fK-JCl">
+                                        <rect key="frame" x="16" y="463" width="343" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Radius: 
 Length of day:
@@ -205,7 +230,7 @@ Orbital period:  Average surface temp: </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="136.80000000000001" y="31.03448275862069"/>
         </scene>
         <!--Intro Page View Controller-->
         <scene sceneID="vYl-RA-XDW">

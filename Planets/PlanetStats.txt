@@ -1,3 +1,10 @@
+ [Sun]
+1400
+Radius: 432,288 mi
+Age: 4.603 billion years
+Distance from Earth: 92.96 million mi
+Average surface temp: 9,940.73 °F [Sun]
+
  [Mercury]
 1400
 Radius: 1,516 mi

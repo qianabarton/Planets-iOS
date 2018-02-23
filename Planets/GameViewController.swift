@@ -24,32 +24,60 @@ class GameViewController: UIViewController {
     var planetNode: SCNNode!
     var sunNode: SCNNode!
     var omni: SCNLight!
+    var omniNode2: SCNNode!
     
-    var planet = "Earth"
-    var omniIntensity = 1400
+    var planet = "Sun"
+    
     var menuVisible = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        omniNode2 = SCNNode()
+        
         setupView()
         setupScene()
 
         setupCamera()
         setupLight()
-        setupSun()
         
         spawnPlanet(planet: planet)
         setLabels(planet: planet)
     }
     
+    
+    func openMenu(){
+        leading.constant = 150
+        trailing.constant = -150
+        menuVisible = true
+        // should pause the scene view while menu is open
+        animateViewSlide()
+    }
+    
+    func closeMenu(){
+        leading.constant = 0
+        trailing.constant = 0
+        menuVisible = false
+        // resume scene
+        animateViewSlide()
+    }
+    
+    func animateViewSlide(){
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    
+    
     func setupView() {
-        //scnView = self.view as SCNView
-        scnView.showsStatistics = true
+        scnView.showsStatistics = false
         scnView.allowsCameraControl = true
         scnView.autoenablesDefaultLighting = false
     }
+    
     
     func setupScene() {
         scnScene = SCNScene()
@@ -64,7 +92,7 @@ class GameViewController: UIViewController {
         omni = SCNLight()
         omniNode.light = omni
         omni.type = SCNLight.LightType.omni
-        omni.intensity = CGFloat(omniIntensity)
+        omni.intensity = CGFloat(PlanetScene().omniIntensity)
         omni.color = UIColor.white
         scnScene.rootNode.addChildNode(omniNode)
         
@@ -87,25 +115,15 @@ class GameViewController: UIViewController {
         scnScene.rootNode.addChildNode(cameraNode)
     }
     
-    func setupSun(){
-        let ball = SCNSphere(radius: 1.0)
-        sunNode = SCNNode()
-        sunNode.geometry = ball
-        sunNode.position = SCNVector3(x: -1, y: 2, z:1.5)
-        sunNode.geometry?.firstMaterial?.diffuse.contents = UIColor.orange
-        
-        //scnScene.rootNode.addChildNode(sunNode)
-    }
+
     
     func spawnPlanet(planet: String) {
-        let ball = SCNSphere(radius: 1.0)
         planetNode = SCNNode()
-        planetNode.geometry = ball
+        planetNode.geometry = SCNSphere(radius: 1.0)
         planetNode.position = SCNVector3(x:0, y:0, z:0)
         
         planetNode.geometry?.firstMaterial?.ambient.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/ambient.png")
         planetNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/map.png")
-        
         planetNode.geometry?.firstMaterial?.normal.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/normal.png")
         planetNode.geometry?.firstMaterial?.normal.intensity = 0.6
         
@@ -131,75 +149,41 @@ class GameViewController: UIViewController {
             closeMenu()
         }
     }
-    
-    func openMenu(){
-        leading.constant = 150
-        trailing.constant = -150
-        menuVisible = true
-        // should pause the scene view while menu is open
-        animateViewSlide()
-    }
-    
-    func closeMenu(){
-        leading.constant = 0
-        trailing.constant = 0
-        menuVisible = false
-        
-        animateViewSlide()
-    }
-    
-    func animateViewSlide(){
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-        })
-    }
-    
+
     @IBAction func planetChooser(_ sender: UIButton) {
         planet = sender.currentTitle!
         planetNode.removeFromParentNode()
-        sunNode.removeFromParentNode()
+        omniNode2.removeFromParentNode()
         closeMenu()
         
         spawnPlanet(planet: planet)
         setLabels(planet: planet)
-        //setupSun()
-        omni.intensity = CGFloat(omniIntensity)
-
+        omni.intensity = CGFloat(PlanetScene().omniIntensity)
     }
     
     func setLabels(planet: String){
         planetName.text = planet
-        planetStats.text = loadPlanetStats(planet: planet)
+        planetStats.text = PlanetScene().loadPlanetStats(planet: planet)
+        
+        if(planet == "Sun"){
+            setupSunLight()
+        }
     }
     
-    func loadPlanetStats(planet: String) -> String{
-        var returnString = "hi"
-        if let filepath = Bundle.main.path(forResource: "PlanetStats", ofType: "txt")
-        {
-            do
-            {
-                let contents = try String(contentsOfFile: filepath)
-                let lines = contents.components(separatedBy: " [" + planet + "]\n")
-                //why
-                let str = lines[1]
-                let sunIndex = str.index(str.startIndex, offsetBy: 4)
-                let returnIndex = str.index(str.startIndex, offsetBy: 4)
-                omniIntensity = Int(Double(str.substring(to: sunIndex))!)
-                print("omni = \(omniIntensity)")
-                returnString = str.substring(from: returnIndex)
-                //print(returnString)
-            }
-            catch
-            {
-                print("PlanetStats.txt contents could not be loaded")
-            }
-        }
-        else
-        {
-            print("PlanetStats.txt could not be found")
-        }
-        return returnString
+    func setupSunLight(){
+        omniNode2.position = SCNVector3(x: -6, y: -2, z: -4)
+        
+        let omni2 = SCNLight()
+        omniNode2.light = omni2
+        omni2.type = SCNLight.LightType.omni
+        omni2.intensity = CGFloat(PlanetScene().omniIntensity)
+        omni2.color = UIColor.white
+        scnScene.rootNode.addChildNode(omniNode2)
     }
+    
+    
+    
+
 
     
 }
