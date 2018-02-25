@@ -9,6 +9,7 @@
 import UIKit
 import QuartzCore
 import SceneKit
+import CoreFoundation
 
 class GameViewController: UIViewController {
     
@@ -24,22 +25,26 @@ class GameViewController: UIViewController {
     var planetNode: SCNNode!
     var sunNode: SCNNode!
     var omni: SCNLight!
-    var omniNode2: SCNNode!
+    var sunLighting1: SCNNode!
+    var sunLighting2: SCNNode!
+    var sunLighting3: SCNNode!
+
+    var omniIntensity = 1400
     
-    var planet = "Sun"
-    
+    var planet = "Earth"
     var menuVisible = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.alpha = 0
         
-        omniNode2 = SCNNode()
+        UIView.animate(withDuration: 5.0, animations: {
+            self.view.alpha = 1.0
+        })
         
         setupView()
         setupScene()
-
         setupCamera()
         setupLight()
         
@@ -53,6 +58,7 @@ class GameViewController: UIViewController {
         trailing.constant = -150
         menuVisible = true
         // should pause the scene view while menu is open
+        scnScene.isPaused = true
         animateViewSlide()
     }
     
@@ -60,7 +66,7 @@ class GameViewController: UIViewController {
         leading.constant = 0
         trailing.constant = 0
         menuVisible = false
-        // resume scene
+        scnScene.isPaused = false
         animateViewSlide()
     }
     
@@ -70,29 +76,28 @@ class GameViewController: UIViewController {
         })
     }
     
-    
-    
     func setupView() {
         scnView.showsStatistics = false
         scnView.allowsCameraControl = true
         scnView.autoenablesDefaultLighting = false
+        
     }
-    
     
     func setupScene() {
         scnScene = SCNScene()
         scnView.scene = scnScene
         scnScene.background.contents = "objects.scnassets/Textures/Backgrounds/galaxy_crop.png"
+        
     }
     
     func setupLight(){
         let omniNode = SCNNode()
-        omniNode.position = SCNVector3(x: 3, y: 2, z: 3)
+        omniNode.position = SCNVector3(x: 3, y: 3, z: 3)
 
         omni = SCNLight()
         omniNode.light = omni
         omni.type = SCNLight.LightType.omni
-        omni.intensity = CGFloat(PlanetScene().omniIntensity)
+        omni.intensity = CGFloat(omniIntensity)
         omni.color = UIColor.white
         scnScene.rootNode.addChildNode(omniNode)
         
@@ -103,41 +108,74 @@ class GameViewController: UIViewController {
         ambientNode.light = ambient
         ambient.type = SCNLight.LightType.ambient
         ambient.color = UIColor.white
-        ambient.intensity = 700
+        ambient.intensity = 200
         scnScene.rootNode.addChildNode(ambientNode)
+        
+        sunLighting1 = SCNNode()
+        sunLighting2 = SCNNode()
+        sunLighting3 = SCNNode()
     }
     
     func setupCamera() {
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 5)
-        
         scnScene.rootNode.addChildNode(cameraNode)
     }
     
 
+    func fade(from: Double, to: Double){
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = from
+        animation.toValue = to
+        animation.duration = 1.5
+        planetNode.addAnimation(animation, forKey: nil)
+    }
     
     func spawnPlanet(planet: String) {
         planetNode = SCNNode()
+        
+        fade(from:0.0, to:1.0) // fade in
+        
         planetNode.geometry = SCNSphere(radius: 1.0)
         planetNode.position = SCNVector3(x:0, y:0, z:0)
         
+
+        
         planetNode.geometry?.firstMaterial?.ambient.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/ambient.png")
         planetNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/map.png")
+        //planetNode.geometry?.firstMaterial?.transparent.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/clouds.png")
         planetNode.geometry?.firstMaterial?.normal.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/normal.png")
         planetNode.geometry?.firstMaterial?.normal.intensity = 0.6
         
         planetNode.geometry?.firstMaterial?.specular.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/specular.png")
         planetNode.geometry?.firstMaterial?.specular.intensity = 0.1
         
-        planetNode.geometry?.firstMaterial?.emission.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/emission.jpg")
+     planetNode.geometry?.firstMaterial?.emission.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/emission.png")
+        
+
+        if(planet == "Earth"){
+          //  let glow = SCNParticleSystem(named: "GlowParticle.scnp", inDirectory: nil)!
+          //  planetNode.addParticleSystem(glow)
+        }
+        
+        if(planet == "Saturn"){
+            let ringNode = SCNNode()
+            ringNode.geometry = SCNTorus(ringRadius: 1.8, pipeRadius: 0.5)
+            ringNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/ring.png")
+            ringNode.scale = SCNVector3(x: 1, y: 0.05, z: 0.7)
+            planetNode.addChildNode(ringNode)
+        }
         
         let action = SCNAction.rotate(by:720 * CGFloat((.pi)/100.0), around: SCNVector3(x:0, y:1, z:0), duration:60)
         let repeatAction = SCNAction.repeatForever(action)
         
+        planetNode?.runAction(repeatAction)
         scnScene.rootNode.addChildNode(planetNode)
-        planetNode.runAction(repeatAction)
+
     }
+    
+
 
     @IBAction func menuPressed(_ sender: UIBarButtonItem) {
         // if menu is NOT visible, open it
@@ -152,38 +190,107 @@ class GameViewController: UIViewController {
 
     @IBAction func planetChooser(_ sender: UIButton) {
         planet = sender.currentTitle!
-        planetNode.removeFromParentNode()
-        omniNode2.removeFromParentNode()
-        closeMenu()
         
+        resetScene()
+
         spawnPlanet(planet: planet)
         setLabels(planet: planet)
-        omni.intensity = CGFloat(PlanetScene().omniIntensity)
+        omni.intensity = CGFloat(omniIntensity)
+    }
+    
+    func resetScene(){
+        fade(from:1.0, to:0.0) // fade out
+        
+        planetNode.removeFromParentNode()
+        sunLighting1.removeFromParentNode()
+        sunLighting2.removeFromParentNode()
+        sunLighting3.removeFromParentNode()
+        
+        closeMenu()
+        
+        scnView.pointOfView?.position = SCNVector3(x: 0, y: 0, z: 5)
+        scnView.pointOfView?.rotation = SCNVector4(x: 0, y: 0, z: 0, w:0)
+    }
+    
+    @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
+        if menuVisible {
+            closeMenu()
+        }
+    }
+    
+    @IBAction func aboutPressed(_ sender: UIButton) {
+        closeMenu()
     }
     
     func setLabels(planet: String){
         planetName.text = planet
-        planetStats.text = PlanetScene().loadPlanetStats(planet: planet)
+        planetStats.text = loadPlanetStats(planet: planet)
         
         if(planet == "Sun"){
-            setupSunLight()
+           setupSunLight()
+            setupParticle()
         }
     }
     
+    func loadPlanetStats(planet: String) -> String{
+        var returnString = ""
+        if let filepath = Bundle.main.path(forResource: "PlanetStats", ofType: "txt")
+        {
+            do
+            {
+                let contents = try String(contentsOfFile: filepath)
+                let lines = contents.components(separatedBy: " [" + planet + "]\n")
+                //why
+                let str = lines[1]
+                let intensity = str.index(str.startIndex, offsetBy: 4)
+                omniIntensity = Int(Double(str.substring(to: intensity))!)
+                
+                let returnIndex = str.index(str.startIndex, offsetBy: 4)
+                returnString = str.substring(from: returnIndex)
+                //print(returnString)
+            }
+            catch
+            {
+                print("PlanetStats.txt contents could not be loaded")
+            }
+        }
+        else
+        {
+            print("PlanetStats.txt could not be found")
+        }
+        return returnString
+    }
+    
     func setupSunLight(){
-        omniNode2.position = SCNVector3(x: -6, y: -2, z: -4)
+        sunLighting1.position = SCNVector3(x: -3, y: -3, z: -3) // left
+        sunLighting2.position = SCNVector3(x: 3, y: -2, z:-3) // left
+
+        sunLighting1.light = omni
         
-        let omni2 = SCNLight()
-        omniNode2.light = omni2
-        omni2.type = SCNLight.LightType.omni
-        omni2.intensity = CGFloat(PlanetScene().omniIntensity)
-        omni2.color = UIColor.white
-        scnScene.rootNode.addChildNode(omniNode2)
+        let ambient2 = SCNLight()
+        sunLighting1.light = ambient2
+        ambient2.type = SCNLight.LightType.ambient
+        ambient2.intensity = 500
+        
+        sunLighting2.light = ambient2
+
+        scnScene.rootNode.addChildNode(sunLighting1)
+        scnScene.rootNode.addChildNode(sunLighting2)
     }
     
     
+    func setupParticle(){
+        let flame = SCNParticleSystem(named: "ParticleSystem.scnp", inDirectory: nil)!
+        planetNode.addParticleSystem(flame)
+    }
     
+}
 
-
-    
+extension UIImage {
+    func caLayer() -> CALayer {
+        let layer = CALayer()
+        layer.frame = CGRect(x:0, y:0, width:self.size.width, height:self.size.height)
+        layer.contents = self.cgImage
+        return layer
+    }
 }

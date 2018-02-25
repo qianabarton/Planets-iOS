@@ -14,7 +14,7 @@ Orbital period: 88 days
 Average surface temp: 800 °F [Mercury]
 
  [Venus]
-1400
+1700
 Radius: 3,760 mi
 Length of day: 116d 18h 0m
 Distance from Sun: 67.24 million mi
@@ -38,7 +38,7 @@ Orbital period: 687 days
 Average surface temp: -80 °F [Mars]
 
  [Jupiter]
-0600
+0900
 Radius: 43,441 mi
 Length of day: 0d 9h 56m
 Distance from Sun: 483.8 million mi
@@ -46,7 +46,7 @@ Orbital period: 11.86 years
 Average surface temp: -234 °F [Jupiter]
 
  [Saturn]
-0500
+0700
 Radius: 36,184 mi
 Length of day: 0d 10h 42m
 Distance from Sun: 888.2 million mi
@@ -54,7 +54,7 @@ Orbital period: 29.5 years
 Average surface temp: -288 °F [Saturn]
 
  [Uranus]
-0400
+0700
 Radius: 15,759 mi
 Length of day: 0d 17h 14m
 Distance from Sun: 1.784 billion mi
