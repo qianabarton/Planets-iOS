@@ -1,3 +1,3 @@
 # Planets-iOS
 
-A 3D Visualization of our solar system created in Xcode using Swift and SceneKit.
+A interactive 3D Visualization of the planets in our solar system. Created in Xcode using Swift and SceneKit.
