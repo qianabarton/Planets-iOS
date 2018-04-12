@@ -24,6 +24,21 @@ class AboutViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
     }
    
+    @IBAction func PortfolioLink(_ sender: UIButton) {
+        
+        if let url = NSURL(string: "https://qianabarton.github.io/") {
+            UIApplication.shared.open(url as URL, options: [:])
+        }
+    }
+    
+    
+    @IBAction func SourceCodeLink(_ sender: UIButton) {
+        if let url = NSURL(string: "https://github.com/qianabarton/Planets-iOS") {
+            UIApplication.shared.open(url as URL, options: [:])
+        }
+        
+    }
+    
     
     
 }

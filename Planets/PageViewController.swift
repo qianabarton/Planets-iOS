@@ -8,50 +8,97 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController {
+class PageViewController:  UIPageViewController  {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       // dataSource = self
-        // Do any additional setup after loading the view.
+    var pageDelegate: PageViewControllerDelegate?
+    var page = 0
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+
         
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
+    }
+    
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+        delegate = self
+        dataSource = self
+        
+        //let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+
+
+        setViewControllers([getWelcomeOne()],
                                direction: .forward,
                                animated: true,
                                completion: nil)
-        }
+    
+        pageDelegate?.pageViewController(pageViewController: self, didUpdatePageCount: 2)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func getWelcomeOne() -> WelcomeOneViewController {
+        page = 0
+        return storyboard!.instantiateViewController(withIdentifier: "WelcomeOne") as! WelcomeOneViewController
+    }
+    
+    func getWelcomeTwo() -> WelcomeTwoViewController {
+        page = 1
+        return storyboard!.instantiateViewController(withIdentifier: "WelcomeTwo") as! WelcomeTwoViewController
     }
     
     
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newCViewController(color: "Green"),
-                self.newCViewController(color: "Purple"),
-    ]
-    }()
-    
-    private func newCViewController(color: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(color)ViewController")
-    }
 
-    /*
-    // MARK: - Navigation
+    
+}
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+extension PageViewController: UIPageViewControllerDataSource {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
+        if viewController.isKind(of: WelcomeOneViewController.self) {
+            // 0 -> 1
+            return getWelcomeTwo()
+        } else {
+            // 1 -> end of the road
+            return nil
+        }
+        
     }
-    */
     
-    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if viewController.isKind(of: WelcomeTwoViewController.self) {
+            // 1 -> 0
+            return getWelcomeOne()
+        } else {
+            // 0 -> end of the road
+            return nil
+        }
+    }
     
 
 }
+    
+extension PageViewController: UIPageViewControllerDelegate {
+        
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool,
+                            previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        pageDelegate?.pageViewController(pageViewController: self, didUpdatePageIndex: self.page)
+        
+    }
+}
+    
+protocol PageViewControllerDelegate: class {
+    func pageViewController(pageViewController: PageViewController,didUpdatePageCount count: Int)
+    
+    func pageViewController(pageViewController: PageViewController, didUpdatePageIndex index: Int)
+}
+
 

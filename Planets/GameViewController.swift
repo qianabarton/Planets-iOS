@@ -129,18 +129,16 @@ class GameViewController: UIViewController {
         animation.fromValue = from
         animation.toValue = to
         animation.duration = 1.5
-        planetNode.addAnimation(animation, forKey: nil)
+        animation.isRemovedOnCompletion = true
+        
+        planetNode.addAnimation(animation, forKey: "opacity")
     }
     
     func spawnPlanet(planet: String) {
         planetNode = SCNNode()
         
-        fade(from:0.0, to:1.0) // fade in
-        
         planetNode.geometry = SCNSphere(radius: 1.0)
         planetNode.position = SCNVector3(x:0, y:0, z:0)
-        
-
         
         planetNode.geometry?.firstMaterial?.ambient.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/ambient.png")
         planetNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/map.png")
@@ -151,7 +149,7 @@ class GameViewController: UIViewController {
         planetNode.geometry?.firstMaterial?.specular.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/specular.png")
         planetNode.geometry?.firstMaterial?.specular.intensity = 0.1
         
-     planetNode.geometry?.firstMaterial?.emission.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/emission.png")
+        planetNode.geometry?.firstMaterial?.emission.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/emission.png")
         
 
         if(planet == "Earth"){
@@ -172,7 +170,8 @@ class GameViewController: UIViewController {
         
         planetNode?.runAction(repeatAction)
         scnScene.rootNode.addChildNode(planetNode)
-
+        
+        fade(from:0.0, to:1.0) // fade in
     }
     
 
@@ -189,13 +188,19 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func planetChooser(_ sender: UIButton) {
-        planet = sender.currentTitle!
         
+        if(planet == sender.currentTitle!){
+            // do nothing
+            closeMenu()
+        } else {
+        
+        planet = sender.currentTitle!
         resetScene()
 
         spawnPlanet(planet: planet)
         setLabels(planet: planet)
         omni.intensity = CGFloat(omniIntensity)
+        }
     }
     
     func resetScene(){

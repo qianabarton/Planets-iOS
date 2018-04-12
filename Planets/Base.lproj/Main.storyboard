@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b1J-Uc-ctt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bky-F3-ZEG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,9 +37,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7A-u4-oxc" userLabel="Mercury">
-                                <rect key="frame" x="16" y="104" width="90" height="30"/>
+                                <rect key="frame" x="16" y="110" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Mercury">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -48,10 +48,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62D-Zk-vCq">
-                                <rect key="frame" x="16" y="138" width="90" height="30"/>
+                                <rect key="frame" x="16" y="150" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Venus">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -60,9 +60,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi0-4I-tc1">
-                                <rect key="frame" x="16" y="172" width="90" height="30"/>
+                                <rect key="frame" x="16" y="190" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Earth">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -71,9 +71,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-3q-DLJ">
-                                <rect key="frame" x="16" y="206" width="90" height="30"/>
+                                <rect key="frame" x="16" y="230" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Mars">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -82,9 +82,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Xq-1XT">
-                                <rect key="frame" x="16" y="240" width="90" height="30"/>
+                                <rect key="frame" x="16" y="270" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Jupiter">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -93,9 +93,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-gB-nGp">
-                                <rect key="frame" x="16" y="274" width="90" height="30"/>
+                                <rect key="frame" x="16" y="310" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Saturn">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -104,9 +104,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-yp-4MJ">
-                                <rect key="frame" x="16" y="308" width="90" height="30"/>
+                                <rect key="frame" x="16" y="350" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Uranus">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -114,10 +114,10 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lfA-55-Zd5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-ys-uD4">
-                                <rect key="frame" x="16" y="342" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-ys-uD4">
+                                <rect key="frame" x="16" y="390" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Neptune">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -126,16 +126,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4k-MX-SBW">
-                                <rect key="frame" x="16" y="400" width="65" height="21"/>
+                                <rect key="frame" x="16" y="472" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYK-zd-Sbo">
-                                <rect key="frame" x="16" y="420" width="90" height="30"/>
+                                <rect key="frame" x="16" y="499" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sun">
                                     <color key="titleColor" red="0.54160485579999995" green="0.54160485579999995" blue="0.54160485579999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -143,28 +143,12 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bEJ-IJ-FXV"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ho-Vm-p7V">
-                                <rect key="frame" x="16" y="534" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYT-uA-bsl">
-                                <rect key="frame" x="16" y="572" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Introduction">
-                                    <color key="titleColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-tb-WYf">
-                                <rect key="frame" x="16" y="472" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-tb-WYf">
+                                <rect key="frame" x="16" y="600" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="About">
-                                    <color key="titleColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="aboutPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="xmm-6A-bCY"/>
@@ -236,7 +220,7 @@ Orbital period:  Average surface temp: </string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="31.03448275862069"/>
+            <point key="canvasLocation" x="-10" y="28"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="hCA-w9-Xc5">
@@ -300,14 +284,14 @@ Orbital period:  Average surface temp: </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm Qiana, a software engineer with a passion for iOS, 3D, mobile and web development." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-6s-Snm">
-                                <rect key="frame" x="32" y="220" width="311" height="77"/>
+                                <rect key="frame" x="32" y="210" width="311" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.63142877819999998" green="0.63141477109999999" blue="0.63141757249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planets Source Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRP-O4-Rd1">
-                                <rect key="frame" x="32" y="442" width="215" height="32"/>
+                                <rect key="frame" x="32" y="417" width="215" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -320,32 +304,40 @@ Orbital period:  Average surface temp: </string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://qianabarton.github.io/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-CR-zbv">
-                                <rect key="frame" x="32" y="357" width="311" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyA-52-0N1">
+                                <rect key="frame" x="32" y="347" width="311" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://github.com/qianabarton/Planets-iOS" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzq-eY-t4Z">
-                                <rect key="frame" x="32" y="482" width="327" height="36"/>
+                                <state key="normal" title="https://qianabarton.github.io/">
+                                    <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="PortfolioLink:" destination="Zlo-Gg-pY2" eventType="touchUpInside" id="WRH-qc-ifu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uz-FK-AuX">
+                                <rect key="frame" x="32" y="447" width="343" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="https://github.com/qianabarton/Planets-iOS">
+                                    <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="SourceCodeLink:" destination="Zlo-Gg-pY2" eventType="touchUpInside" id="RhO-PY-h2d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlZ-Kn-C68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.60000000000002" y="30.134932533733135"/>
+            <point key="canvasLocation" x="701.60000000000002" y="28.335832083958024"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vpt-oA-Nls">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1J-Uc-ctt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="b1J-Uc-ctt" customClass="NavigationController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DBk-OM-A4f">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -363,9 +355,163 @@ Orbital period:  Average surface temp: </string>
             </objects>
             <point key="canvasLocation" x="-738" y="31"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="WwK-PV-DAd">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jgL-8S-6mg" customClass="PageViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="b1J-Uc-ctt" kind="presentation" identifier="navigationSegue" modalTransitionStyle="crossDissolve" id="BK2-aM-cev"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKW-ZG-us1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="791"/>
+        </scene>
+        <!--PageControl-->
+        <scene sceneID="ywU-Rn-ceI">
+            <objects>
+                <viewController title="PageControl" id="Bky-F3-ZEG" customClass="PageControl" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rbv-j7-Mez"/>
+                        <viewControllerLayoutGuide type="bottom" id="ljs-bm-q8u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VGt-ac-YhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgz-1B-bOj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="jgL-8S-6mg" kind="embed" id="ghS-bO-ykO"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVX-jd-Nsb">
+                                <rect key="frame" x="0.0" y="606" width="375" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htn-8v-usg">
+                                        <rect key="frame" x="0.0" y="0.0" width="371" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="GET STARTED">
+                                            <color key="titleColor" red="0.63142877819999998" green="0.63141477109999999" blue="0.63141757249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickedGetStarted:" destination="Bky-F3-ZEG" eventType="touchUpInside" id="Alc-JF-1Zd"/>
+                                            <segue destination="b1J-Uc-ctt" kind="presentation" identifier="navigationSegue" modalTransitionStyle="crossDissolve" id="VZh-cK-iTw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9535810596446701" green="0.9535810596446701" blue="0.9535810596446701" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="gxJ-2L-sYq">
+                                <rect key="frame" x="150" y="561" width="74" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dots" destination="gxJ-2L-sYq" id="giZ-Bv-XwX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bO-Yo-pNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1218.4000000000001" y="787.55622188905556"/>
+        </scene>
+        <!--Welcome One View Controller-->
+        <scene sceneID="wz3-Tg-980">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeOne" id="tFf-X4-y2p" customClass="WelcomeOneViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6iW-Nj-wHP"/>
+                        <viewControllerLayoutGuide type="bottom" id="edB-fq-FmY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nGP-vN-Ces">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planets-1" translatesAutoresizingMaskIntoConstraints="NO" id="O4K-cB-1VJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQh-cr-p0q" customClass="WelcomeOverlayView" customModule="Planets" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME TO PLANETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyb-JZ-vCo">
+                                <rect key="frame" x="68" y="295" width="239" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOUCH TO ROTATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZB-yZ-aFl">
+                                <rect key="frame" x="56" y="352" width="263" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amD-IH-u98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="788"/>
+        </scene>
+        <!--Welcome Two View Controller-->
+        <scene sceneID="XWS-RM-x3l">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeTwo" id="aKo-wj-NVl" customClass="WelcomeTwoViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mwI-aY-eDO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Acj-qo-vae"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qci-Rz-Fz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planets-2" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-Xr-bGq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmD-TQ-GgC" customClass="WelcomeOverlayView" customModule="Planets" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planet-circles" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-GM-FLR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OPEN THE MENU TO VIEW ANOTHER PLANET" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-zK-7Wl">
+                                <rect key="frame" x="158" y="178" width="200" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCi-i0-WZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="788"/>
+        </scene>
     </scenes>
     <resources>
         <image name="crown" width="450" height="450"/>
         <image name="menu_button_50" width="50" height="50"/>
+        <image name="planet-circles" width="750" height="1334"/>
+        <image name="planets-1" width="750" height="1334"/>
+        <image name="planets-2" width="750" height="1334"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VZh-cK-iTw"/>
+    </inferredMetricsTieBreakers>
 </document>
