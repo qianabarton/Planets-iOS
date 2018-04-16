@@ -19,6 +19,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var planetName: UILabel!
     @IBOutlet weak var planetStats: UILabel!
     
+    @IBOutlet var welcomeView: UIView!
+    @IBOutlet weak var gettingStartedButton: UIButton!
+    
     var scnScene: SCNScene!
     var cameraNode: SCNNode!
 
@@ -33,12 +36,12 @@ class GameViewController: UIViewController {
     
     var planet = "Earth"
     var menuVisible = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.alpha = 0
-        
         UIView.animate(withDuration: 5.0, animations: {
             self.view.alpha = 1.0
         })
@@ -50,6 +53,21 @@ class GameViewController: UIViewController {
         
         spawnPlanet(planet: planet)
         setLabels(planet: planet)
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        welcomeView.frame = CGRect(x: 0, y: 0, width: (parent?.view.frame.width)!, height: (parent?.view.frame.height)!)
+        self.view.addSubview(welcomeView)
+    }
+    
+    @IBAction func getStartedButtonClick(_ sender: UIButton) {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.welcomeView.alpha = 0
+        }, completion: {(finished:Bool) in
+            self.welcomeView.removeFromSuperview()
+        })
     }
     
     
@@ -87,7 +105,6 @@ class GameViewController: UIViewController {
         scnScene = SCNScene()
         scnView.scene = scnScene
         scnScene.background.contents = "objects.scnassets/Textures/Backgrounds/galaxy_crop.png"
-        
     }
     
     func setupLight(){
@@ -132,6 +149,7 @@ class GameViewController: UIViewController {
         animation.isRemovedOnCompletion = true
         
         planetNode.addAnimation(animation, forKey: "opacity")
+        
     }
     
     func spawnPlanet(planet: String) {
@@ -151,12 +169,6 @@ class GameViewController: UIViewController {
         
         planetNode.geometry?.firstMaterial?.emission.contents = UIImage(named: "objects.scnassets/Textures/" + planet + "/emission.png")
         
-
-        if(planet == "Earth"){
-          //  let glow = SCNParticleSystem(named: "GlowParticle.scnp", inDirectory: nil)!
-          //  planetNode.addParticleSystem(glow)
-        }
-        
         if(planet == "Saturn"){
             let ringNode = SCNNode()
             ringNode.geometry = SCNTorus(ringRadius: 1.8, pipeRadius: 0.5)
@@ -165,17 +177,17 @@ class GameViewController: UIViewController {
             planetNode.addChildNode(ringNode)
         }
         
-        let action = SCNAction.rotate(by:720 * CGFloat((.pi)/100.0), around: SCNVector3(x:0, y:1, z:0), duration:60)
-        let repeatAction = SCNAction.repeatForever(action)
+        let action = SCNAction.repeatForever(SCNAction.rotate(by:720 * CGFloat((.pi)/100.0), around: SCNVector3(x:0, y:1, z:0), duration:60))
         
-        planetNode?.runAction(repeatAction)
+        
         scnScene.rootNode.addChildNode(planetNode)
-        
         fade(from:0.0, to:1.0) // fade in
+        
+        planetNode?.runAction(action)
+
+
     }
     
-
-
     @IBAction func menuPressed(_ sender: UIBarButtonItem) {
         // if menu is NOT visible, open it
         if !menuVisible {
@@ -226,6 +238,15 @@ class GameViewController: UIViewController {
     @IBAction func aboutPressed(_ sender: UIButton) {
         closeMenu()
     }
+    
+    @IBAction func helpPressed(_ sender: UIButton) {
+        closeMenu()
+        UIView.animate(withDuration: 1, animations: {
+            self.view.addSubview(self.welcomeView)
+            self.welcomeView.alpha = 1
+        })
+    }
+    
     
     func setLabels(planet: String){
         planetName.text = planet

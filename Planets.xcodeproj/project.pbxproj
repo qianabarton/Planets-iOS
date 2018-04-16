@@ -9,18 +9,13 @@
 /* Begin PBXBuildFile section */
 		971F3D5F1FC525B70081DC45 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971F3D5E1FC525B70081DC45 /* MenuViewController.swift */; };
 		971F3D611FC56E160081DC45 /* PlanetStats.txt in Resources */ = {isa = PBXBuildFile; fileRef = 971F3D601FC566ED0081DC45 /* PlanetStats.txt */; };
-		971F3D651FC5984F0081DC45 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971F3D641FC5984F0081DC45 /* PageViewController.swift */; };
 		9743415320410BD3000E3578 /* ParticleSystem.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9743415220410BD3000E3578 /* ParticleSystem.scnp */; };
 		9743415520410C03000E3578 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9743415420410C03000E3578 /* spark.png */; };
 		9743415720415578000E3578 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9743415620415578000E3578 /* AboutViewController.swift */; };
 		97434159204156C8000E3578 /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 97434158204156C7000E3578 /* crown.png */; };
-		975A84CA204019C200D7A93B /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975A84C9204019C200D7A93B /* PlanetScene.swift */; };
 		977D40A1204194AB0071C678 /* GlowParticle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 977D40A0204194AB0071C678 /* GlowParticle.scnp */; };
-		97D08B3A207F34D80028C702 /* WelcomeOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D08B39207F34D80028C702 /* WelcomeOneViewController.swift */; };
-		97D08B3C207F39C70028C702 /* WelcomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D08B3B207F39C70028C702 /* WelcomeTwoViewController.swift */; };
-		97D08B3E207F401F0028C702 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D08B3D207F401F0028C702 /* PageControl.swift */; };
-		97D08B46207F5B1D0028C702 /* WelcomeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D08B45207F5B1D0028C702 /* WelcomeOverlayView.swift */; };
 		97D08B48207F6F600028C702 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D08B47207F6F600028C702 /* NavigationController.swift */; };
+		97D08B4E2084208C0028C702 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D08B4D2084208C0028C702 /* WelcomeView.swift */; };
 		97FCED9E1FAACD4A0033249A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FCED9D1FAACD4A0033249A /* AppDelegate.swift */; };
 		97FCEDA21FAACD4A0033249A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FCEDA11FAACD4A0033249A /* GameViewController.swift */; };
 		97FCEDA51FAACD4A0033249A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FCEDA31FAACD4A0033249A /* Main.storyboard */; };
@@ -51,23 +46,18 @@
 /* Begin PBXFileReference section */
 		971F3D5E1FC525B70081DC45 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		971F3D601FC566ED0081DC45 /* PlanetStats.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlanetStats.txt; path = "/Users/qiana/Desktop/Development/GITHUB/Planets-iOS/Planets/PlanetStats.txt"; sourceTree = "<absolute>"; };
-		971F3D641FC5984F0081DC45 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9743415220410BD3000E3578 /* ParticleSystem.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = ParticleSystem.scnp; sourceTree = "<group>"; };
 		9743415420410C03000E3578 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9743415620415578000E3578 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		97434158204156C7000E3578 /* crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crown.png; path = "../../../../Design/QB Logo/crown.png"; sourceTree = "<group>"; };
-		975A84C9204019C200D7A93B /* PlanetScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetScene.swift; sourceTree = "<group>"; };
 		977D40A0204194AB0071C678 /* GlowParticle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = GlowParticle.scnp; sourceTree = "<group>"; };
-		97D08B39207F34D80028C702 /* WelcomeOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOneViewController.swift; sourceTree = "<group>"; };
-		97D08B3B207F39C70028C702 /* WelcomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTwoViewController.swift; sourceTree = "<group>"; };
-		97D08B3D207F401F0028C702 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		97D08B45207F5B1D0028C702 /* WelcomeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOverlayView.swift; sourceTree = "<group>"; };
 		97D08B47207F6F600028C702 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		97D08B4D2084208C0028C702 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		97FCED9A1FAACD4A0033249A /* Planets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FCED9D1FAACD4A0033249A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97FCEDA11FAACD4A0033249A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		97FCEDA41FAACD4A0033249A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		97FCEDA61FAACD4A0033249A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97FCEDA61FAACD4A0033249A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = objects.scnassets/Assets.xcassets; sourceTree = "<group>"; };
 		97FCEDA91FAACD4A0033249A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97FCEDAB1FAACD4A0033249A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97FCEDB01FAACD4A0033249A /* PlanetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,21 +131,16 @@
 				97FCED9D1FAACD4A0033249A /* AppDelegate.swift */,
 				97FCEDA11FAACD4A0033249A /* GameViewController.swift */,
 				9743415620415578000E3578 /* AboutViewController.swift */,
-				975A84C9204019C200D7A93B /* PlanetScene.swift */,
 				971F3D5E1FC525B70081DC45 /* MenuViewController.swift */,
-				971F3D641FC5984F0081DC45 /* PageViewController.swift */,
-				97D08B3D207F401F0028C702 /* PageControl.swift */,
 				97D08B47207F6F600028C702 /* NavigationController.swift */,
-				97D08B39207F34D80028C702 /* WelcomeOneViewController.swift */,
-				97D08B3B207F39C70028C702 /* WelcomeTwoViewController.swift */,
-				97D08B45207F5B1D0028C702 /* WelcomeOverlayView.swift */,
-				97FCEDA31FAACD4A0033249A /* Main.storyboard */,
-				9743415120410B7B000E3578 /* Particle */,
+				97D08B4D2084208C0028C702 /* WelcomeView.swift */,
 				97FCEDA61FAACD4A0033249A /* Assets.xcassets */,
-				97434158204156C7000E3578 /* crown.png */,
+				97FCEDA31FAACD4A0033249A /* Main.storyboard */,
 				97FCEDA81FAACD4A0033249A /* LaunchScreen.storyboard */,
+				97434158204156C7000E3578 /* crown.png */,
 				97FCEDAB1FAACD4A0033249A /* Info.plist */,
 				971F3D601FC566ED0081DC45 /* PlanetStats.txt */,
+				9743415120410B7B000E3578 /* Particle */,
 			);
 			path = Planets;
 			sourceTree = "<group>";
@@ -322,17 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				971F3D651FC5984F0081DC45 /* PageViewController.swift in Sources */,
 				97D08B48207F6F600028C702 /* NavigationController.swift in Sources */,
-				97D08B3A207F34D80028C702 /* WelcomeOneViewController.swift in Sources */,
-				97D08B3E207F401F0028C702 /* PageControl.swift in Sources */,
-				97D08B3C207F39C70028C702 /* WelcomeTwoViewController.swift in Sources */,
-				97D08B46207F5B1D0028C702 /* WelcomeOverlayView.swift in Sources */,
+				97D08B4E2084208C0028C702 /* WelcomeView.swift in Sources */,
 				97FCEDA21FAACD4A0033249A /* GameViewController.swift in Sources */,
 				9743415720415578000E3578 /* AboutViewController.swift in Sources */,
 				97FCED9E1FAACD4A0033249A /* AppDelegate.swift in Sources */,
 				971F3D5F1FC525B70081DC45 /* MenuViewController.swift in Sources */,
-				975A84CA204019C200D7A93B /* PlanetScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

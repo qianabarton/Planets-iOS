@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bky-F3-ZEG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b1J-Uc-ctt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Planets-->
+        <!--Astronomic-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,16 +30,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-aV-IUd">
-                                <rect key="frame" x="16" y="83" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-aV-IUd">
+                                <rect key="frame" x="16" y="74" width="52" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UbH-3C-MYU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.37458359771573602" green="0.37458359771573602" blue="0.37458359771573602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7A-u4-oxc" userLabel="Mercury">
-                                <rect key="frame" x="16" y="110" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7A-u4-oxc" userLabel="Mercury">
+                                <rect key="frame" x="16" y="100" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uFX-Li-o7H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Mercury">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -47,10 +52,12 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="5F8-Ma-KCZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62D-Zk-vCq">
-                                <rect key="frame" x="16" y="150" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62D-Zk-vCq">
+                                <rect key="frame" x="16" y="140" width="76" height="30"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Sjk-09-pYU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Venus">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -59,9 +66,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="wPu-rb-5aw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi0-4I-tc1">
-                                <rect key="frame" x="16" y="190" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi0-4I-tc1">
+                                <rect key="frame" x="16" y="180" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yfP-Pu-def"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Earth">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -70,9 +79,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fFu-yq-5YJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-3q-DLJ">
-                                <rect key="frame" x="16" y="230" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMC-3q-DLJ">
+                                <rect key="frame" x="16" y="220" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8VK-HW-aH9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Mars">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -81,9 +92,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YGe-V0-5De"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Xq-1XT">
-                                <rect key="frame" x="16" y="270" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Xq-1XT">
+                                <rect key="frame" x="16" y="260" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yfT-Xb-nhC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Jupiter">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,9 +105,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1fv-1j-qgs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-gB-nGp">
-                                <rect key="frame" x="16" y="310" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-gB-nGp">
+                                <rect key="frame" x="16" y="300" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OBA-GB-k6z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Saturn">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -103,9 +118,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="2vP-vD-qfO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-yp-4MJ">
-                                <rect key="frame" x="16" y="350" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-yp-4MJ">
+                                <rect key="frame" x="16" y="340" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7MA-Fy-T2B"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Uranus">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -114,9 +131,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lfA-55-Zd5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-ys-uD4">
-                                <rect key="frame" x="16" y="390" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-ys-uD4">
+                                <rect key="frame" x="16" y="380" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eac-Na-ksh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Neptune">
                                     <color key="titleColor" red="0.54160485579277662" green="0.54160485579277662" blue="0.54160485579277662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -125,16 +144,20 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Mwf-wk-Jo8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4k-MX-SBW">
-                                <rect key="frame" x="16" y="472" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4k-MX-SBW">
+                                <rect key="frame" x="16" y="435" width="52" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="9lv-rL-QZm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.37458359769999999" green="0.37458359769999999" blue="0.37458359769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYK-zd-Sbo">
-                                <rect key="frame" x="16" y="499" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYK-zd-Sbo">
+                                <rect key="frame" x="16" y="452" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hQC-mJ-r5B"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sun">
                                     <color key="titleColor" red="0.54160485579999995" green="0.54160485579999995" blue="0.54160485579999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -143,9 +166,11 @@
                                     <action selector="planetChooser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bEJ-IJ-FXV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-tb-WYf">
-                                <rect key="frame" x="16" y="600" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-tb-WYf">
+                                <rect key="frame" x="16" y="591" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dKb-IC-ZCM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -155,20 +180,34 @@
                                     <segue destination="Zlo-Gg-pY2" kind="presentation" identifier="about" modalTransitionStyle="coverVertical" id="13B-pm-mBt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uiw-l0-5jG">
+                                <rect key="frame" x="16" y="621" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zDe-kk-hdL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="helpPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Bjs-D4-iTj"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26t-A3-0aC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" loops="NO" playing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cT1-4J-2mY">
+                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" loops="NO" playing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cT1-4J-2mY">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="NL4-rz-Lic" appends="YES" id="116-Vr-Uyk"/>
                                         </connections>
                                     </sceneKitView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-fK-JCl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-fK-JCl">
                                         <rect key="frame" x="16" y="463" width="343" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="ir1-AR-pyf"/>
+                                        </constraints>
                                         <string key="text">Radius: 
 Length of day:
 Distance from Sun: 
@@ -177,27 +216,78 @@ Orbital period:  Average surface temp: </string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planet Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cV-C8-qCx">
-                                        <rect key="frame" x="129" y="96" width="132" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cV-C8-qCx">
+                                        <rect key="frame" x="73" y="96" width="229" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="RBU-Eo-LRk"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="ZX1-0a-uKw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cT1-4J-2mY" firstAttribute="centerX" secondItem="jeC-fK-JCl" secondAttribute="centerX" id="BcH-jU-eXp"/>
+                                    <constraint firstItem="7cV-C8-qCx" firstAttribute="top" secondItem="26t-A3-0aC" secondAttribute="top" constant="96" id="DG3-EU-Cjg"/>
+                                    <constraint firstAttribute="bottom" secondItem="cT1-4J-2mY" secondAttribute="bottom" id="EjP-gO-M47"/>
+                                    <constraint firstItem="jeC-fK-JCl" firstAttribute="leading" secondItem="26t-A3-0aC" secondAttribute="leading" constant="16" id="FX2-Z6-zly"/>
+                                    <constraint firstAttribute="bottom" secondItem="jeC-fK-JCl" secondAttribute="bottom" constant="20" id="Foq-iL-lxC"/>
+                                    <constraint firstItem="cT1-4J-2mY" firstAttribute="top" secondItem="26t-A3-0aC" secondAttribute="top" id="KIj-Wh-HSu"/>
+                                    <constraint firstAttribute="trailing" secondItem="cT1-4J-2mY" secondAttribute="trailing" id="XEC-Sp-PNo"/>
+                                    <constraint firstItem="7cV-C8-qCx" firstAttribute="centerX" secondItem="26t-A3-0aC" secondAttribute="centerX" id="Y1w-OW-3tX"/>
+                                    <constraint firstItem="cT1-4J-2mY" firstAttribute="leading" secondItem="26t-A3-0aC" secondAttribute="leading" id="iiG-DX-grN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="dqq-tb-WYf" firstAttribute="trailing" secondItem="Uiw-l0-5jG" secondAttribute="trailing" id="3M6-0S-3ZN"/>
+                            <constraint firstItem="dqq-tb-WYf" firstAttribute="leading" secondItem="Uiw-l0-5jG" secondAttribute="leading" id="3z2-0J-cdj"/>
                             <constraint firstAttribute="trailing" secondItem="26t-A3-0aC" secondAttribute="trailing" id="5au-ol-e7y" userLabel="trailing"/>
+                            <constraint firstItem="WD9-yp-4MJ" firstAttribute="leading" secondItem="PlD-gB-nGp" secondAttribute="leading" id="5e0-ie-zyE"/>
+                            <constraint firstItem="WD9-yp-4MJ" firstAttribute="top" secondItem="PlD-gB-nGp" secondAttribute="bottom" constant="10" id="6LM-vc-YzM"/>
+                            <constraint firstItem="fJ3-aV-IUd" firstAttribute="trailing" secondItem="v4k-MX-SBW" secondAttribute="trailing" id="7VY-0W-mW5"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="v4k-MX-SBW" secondAttribute="leading" id="7ZO-QB-YT6"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="Uiw-l0-5jG" secondAttribute="leading" id="8Kw-gR-o5c"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="62D-Zk-vCq" secondAttribute="leading" id="8vB-aW-QjX"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="PlD-gB-nGp" secondAttribute="leading" id="BY8-HK-ECa"/>
+                            <constraint firstItem="62D-Zk-vCq" firstAttribute="top" secondItem="w7A-u4-oxc" secondAttribute="bottom" constant="10" id="CVl-f8-f3V"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="vYK-zd-Sbo" secondAttribute="trailing" id="Cr0-Sm-VIX"/>
                             <constraint firstItem="26t-A3-0aC" firstAttribute="leading" secondItem="jMq-jD-3oB" secondAttribute="leading" id="E4L-jm-Rid" userLabel="leading"/>
+                            <constraint firstItem="fJ3-aV-IUd" firstAttribute="leading" secondItem="w7A-u4-oxc" secondAttribute="leading" id="FSc-jH-aBx"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="IMC-3q-DLJ" secondAttribute="trailing" id="G50-nJ-moK"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="vYK-zd-Sbo" secondAttribute="leading" id="GSq-zU-ged"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="IMC-3q-DLJ" secondAttribute="leading" id="H5v-OB-Gxx"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="Imf-Xq-1XT" secondAttribute="trailing" id="LUz-Wi-zyH"/>
+                            <constraint firstItem="WD9-yp-4MJ" firstAttribute="trailing" secondItem="eKB-ys-uD4" secondAttribute="trailing" id="Osi-cJ-qvg"/>
+                            <constraint firstItem="fJ3-aV-IUd" firstAttribute="top" secondItem="XA6-7l-TQU" secondAttribute="bottom" constant="10" id="P80-sU-5qG"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="top" secondItem="fJ3-aV-IUd" secondAttribute="bottom" constant="5" id="QV2-Yg-1ns"/>
+                            <constraint firstItem="Imf-Xq-1XT" firstAttribute="top" secondItem="IMC-3q-DLJ" secondAttribute="bottom" constant="10" id="SPu-oc-OZz"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="xi0-4I-tc1" secondAttribute="trailing" id="YhU-xW-BWb"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="PlD-gB-nGp" secondAttribute="trailing" id="ZEO-sq-BvW"/>
+                            <constraint firstItem="IMC-3q-DLJ" firstAttribute="top" secondItem="xi0-4I-tc1" secondAttribute="bottom" constant="10" id="cWY-sr-TqR"/>
+                            <constraint firstItem="eKB-ys-uD4" firstAttribute="top" secondItem="WD9-yp-4MJ" secondAttribute="bottom" constant="10" id="dFl-Gi-17S"/>
                             <constraint firstItem="26t-A3-0aC" firstAttribute="top" secondItem="XA6-7l-TQU" secondAttribute="bottom" id="efU-Yc-xDc"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="xi0-4I-tc1" secondAttribute="leading" id="fi9-mH-7Ei"/>
+                            <constraint firstItem="Uiw-l0-5jG" firstAttribute="top" secondItem="dqq-tb-WYf" secondAttribute="bottom" id="gbp-Vn-KzP"/>
+                            <constraint firstItem="xi0-4I-tc1" firstAttribute="top" secondItem="62D-Zk-vCq" secondAttribute="bottom" constant="10" id="h8z-Z0-cJu"/>
+                            <constraint firstItem="v4k-MX-SBW" firstAttribute="top" secondItem="eKB-ys-uD4" secondAttribute="bottom" constant="25" id="hH6-z7-9Jd"/>
+                            <constraint firstItem="fJ3-aV-IUd" firstAttribute="leading" secondItem="jMq-jD-3oB" secondAttribute="leadingMargin" id="jkg-GZ-6qG"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="leading" secondItem="Imf-Xq-1XT" secondAttribute="leading" id="m8z-k6-bSs"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="62D-Zk-vCq" secondAttribute="trailing" id="o57-QU-4ns"/>
+                            <constraint firstItem="w7A-u4-oxc" firstAttribute="trailing" secondItem="Uiw-l0-5jG" secondAttribute="trailing" id="oaw-d8-huP"/>
+                            <constraint firstItem="WD9-yp-4MJ" firstAttribute="trailing" secondItem="PlD-gB-nGp" secondAttribute="trailing" id="rO0-Cz-qJl"/>
+                            <constraint firstItem="sWf-ta-aSH" firstAttribute="top" secondItem="Uiw-l0-5jG" secondAttribute="bottom" constant="16" id="s6R-6r-mSS"/>
                             <constraint firstItem="sWf-ta-aSH" firstAttribute="top" secondItem="26t-A3-0aC" secondAttribute="bottom" id="tOy-X9-gX6"/>
+                            <constraint firstItem="WD9-yp-4MJ" firstAttribute="leading" secondItem="eKB-ys-uD4" secondAttribute="leading" id="wiz-7r-x1T"/>
+                            <constraint firstItem="vYK-zd-Sbo" firstAttribute="top" secondItem="v4k-MX-SBW" secondAttribute="bottom" id="woD-nu-tOe"/>
+                            <constraint firstItem="PlD-gB-nGp" firstAttribute="top" secondItem="Imf-Xq-1XT" secondAttribute="bottom" constant="10" id="wyR-IF-Cda"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Planets" id="nzq-eD-nLk">
+                    <navigationItem key="navigationItem" title="Astronomic" largeTitleDisplayMode="always" id="nzq-eD-nLk">
                         <barButtonItem key="leftBarButtonItem" image="menu_button_50" id="Rir-OQ-gK4">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -206,21 +296,84 @@ Orbital period:  Average surface temp: </string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="gettingStartedButton" destination="Si7-If-mNg" id="VcB-4P-fFn"/>
                         <outlet property="leading" destination="E4L-jm-Rid" id="pHv-Hp-dVh"/>
                         <outlet property="planetName" destination="7cV-C8-qCx" id="mm2-hy-nZ1"/>
                         <outlet property="planetStats" destination="jeC-fK-JCl" id="MGO-5j-J6X"/>
                         <outlet property="scnView" destination="cT1-4J-2mY" id="uLO-F3-FwS"/>
                         <outlet property="trailing" destination="5au-ol-e7y" id="7VC-Pn-bDW"/>
+                        <outlet property="welcomeView" destination="Y9f-9e-y9M" id="m3h-0T-4MH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Y9f-9e-y9M" userLabel="Welcome View" customClass="WelcomeView" customModule="Planets" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYZ-bh-u8H" userLabel="Gray View">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <color key="backgroundColor" red="0.1618813452" green="0.1618813452" blue="0.1618813452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
+                        <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO ASTRONOMIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWY-pA-3Ga">
+                            <rect key="frame" x="8" y="206" width="304" height="57"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="ypd-5Y-3Li"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7M-ce-7on">
+                            <rect key="frame" x="33" y="263" width="254" height="109"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="109" id="fZk-7h-uet"/>
+                            </constraints>
+                            <string key="text">1. Touch to rotate
+ 
+2. Open the menu to view another planet</string>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si7-If-mNg">
+                            <rect key="frame" x="0.0" y="447" width="320" height="57"/>
+                            <color key="backgroundColor" red="0.92084390859999998" green="0.92084390859999998" blue="0.92084390859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="uFd-Hd-fgr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="GET STARTED">
+                                <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="getStartedButtonClick:" destination="BV1-FR-VrT" eventType="touchUpInside" id="K3d-zw-er0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nYZ-bh-u8H" firstAttribute="leading" secondItem="Si7-If-mNg" secondAttribute="leading" id="AH1-sg-uXb"/>
+                        <constraint firstAttribute="bottom" secondItem="Si7-If-mNg" secondAttribute="bottom" id="HSe-aF-3Wj"/>
+                        <constraint firstItem="sWY-pA-3Ga" firstAttribute="leading" secondItem="Y9f-9e-y9M" secondAttribute="leading" constant="8" id="MQP-pn-kHZ"/>
+                        <constraint firstItem="a7M-ce-7on" firstAttribute="leading" secondItem="Y9f-9e-y9M" secondAttribute="leading" constant="33" id="NEH-BI-s8r"/>
+                        <constraint firstItem="sWY-pA-3Ga" firstAttribute="centerX" secondItem="a7M-ce-7on" secondAttribute="centerX" id="Ocd-iE-7xf"/>
+                        <constraint firstItem="nYZ-bh-u8H" firstAttribute="top" secondItem="Y9f-9e-y9M" secondAttribute="top" id="f8A-vK-sMg"/>
+                        <constraint firstItem="a7M-ce-7on" firstAttribute="top" secondItem="sWY-pA-3Ga" secondAttribute="bottom" id="fQ3-XB-LLy"/>
+                        <constraint firstAttribute="trailing" secondItem="nYZ-bh-u8H" secondAttribute="trailing" id="gkc-MI-tCG"/>
+                        <constraint firstItem="nYZ-bh-u8H" firstAttribute="trailing" secondItem="Si7-If-mNg" secondAttribute="trailing" id="hSa-gn-WTd"/>
+                        <constraint firstItem="nYZ-bh-u8H" firstAttribute="centerY" secondItem="a7M-ce-7on" secondAttribute="centerY" constant="-65.5" id="mbP-pA-w3H"/>
+                        <constraint firstItem="nYZ-bh-u8H" firstAttribute="leading" secondItem="Y9f-9e-y9M" secondAttribute="leading" id="qSL-1G-9M8"/>
+                        <constraint firstAttribute="bottom" secondItem="nYZ-bh-u8H" secondAttribute="bottom" id="szQ-mk-TrG"/>
+                        <constraint firstItem="a7M-ce-7on" firstAttribute="centerX" secondItem="Si7-If-mNg" secondAttribute="centerX" id="tBG-Es-l1Z"/>
+                    </constraints>
+                </view>
                 <tapGestureRecognizer id="NL4-rz-Lic">
                     <connections>
                         <action selector="handleTap:" destination="BV1-FR-VrT" id="C7N-ey-uDC"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-10" y="28"/>
+            <point key="canvasLocation" x="565.60000000000002" y="-9.4452773613193415"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="hCA-w9-Xc5">
@@ -234,13 +387,14 @@ Orbital period:  Average surface temp: </string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mqr-Z3-nrO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqr-Z3-nrO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-Ke-mzn">
-                                        <rect key="frame" x="92" y="76" width="190" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-Ke-mzn">
+                                        <rect key="frame" x="145" y="100" width="85" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="er4-3z-rxn"/>
+                                        </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="ABOUT">
                                                 <attributes>
@@ -252,13 +406,17 @@ Orbital period:  Average surface temp: </string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crown" translatesAutoresizingMaskIntoConstraints="NO" id="5ko-ij-Dru">
-                                        <rect key="frame" x="152" y="17" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown" translatesAutoresizingMaskIntoConstraints="NO" id="5ko-ij-Dru">
+                                        <rect key="frame" x="152" y="36" width="70" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="pea-Zp-GZY"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-QM-TeQ">
-                                        <rect key="frame" x="27" y="37" width="26" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-QM-TeQ">
+                                        <rect key="frame" x="28" y="39" width="30" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Kth-Rb-ZDc"/>
+                                        </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="X">
@@ -275,38 +433,55 @@ Orbital period:  Average surface temp: </string>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="rpx-QM-TeQ" firstAttribute="top" secondItem="Mqr-Z3-nrO" secondAttribute="top" constant="39" id="8R8-rE-xb0"/>
+                                    <constraint firstItem="rpx-QM-TeQ" firstAttribute="leading" secondItem="Mqr-Z3-nrO" secondAttribute="leading" constant="28" id="9tq-he-W5M"/>
+                                    <constraint firstItem="5ko-ij-Dru" firstAttribute="centerX" secondItem="Mqr-Z3-nrO" secondAttribute="centerX" id="BEG-RM-rFk"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ko-ij-Dru" secondAttribute="bottom" constant="62" id="PHL-iv-CwR"/>
+                                    <constraint firstAttribute="height" constant="165" id="Wjb-3u-wVs"/>
+                                    <constraint firstItem="5ko-ij-Dru" firstAttribute="top" secondItem="Mqr-Z3-nrO" secondAttribute="top" constant="36" id="duZ-bj-T6B"/>
+                                    <constraint firstAttribute="bottom" secondItem="cba-Ke-mzn" secondAttribute="bottom" constant="33" id="tcs-LI-GVZ"/>
+                                    <constraint firstItem="5ko-ij-Dru" firstAttribute="centerX" secondItem="cba-Ke-mzn" secondAttribute="centerX" id="vrM-dJ-4VY"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who Am I?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVf-9V-uAQ">
-                                <rect key="frame" x="30" y="180" width="215" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who Am I?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVf-9V-uAQ">
+                                <rect key="frame" x="32" y="188" width="327" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="2tD-9T-Qwx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm Qiana, a software engineer with a passion for iOS, 3D, mobile and web development." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-6s-Snm">
-                                <rect key="frame" x="32" y="210" width="311" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm Qiana, a software engineer with a passion for iOS, 3D, mobile and web development." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-6s-Snm">
+                                <rect key="frame" x="32" y="218" width="327" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="Zhd-FG-yNZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.63142877819999998" green="0.63141477109999999" blue="0.63141757249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planets Source Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRP-O4-Rd1">
-                                <rect key="frame" x="32" y="417" width="215" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astronomic Source Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRP-O4-Rd1">
+                                <rect key="frame" x="32" y="401" width="327" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="WE2-mp-Awq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Porfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDY-XI-Sxk">
-                                <rect key="frame" x="32" y="317" width="215" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Porfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDY-XI-Sxk">
+                                <rect key="frame" x="32" y="306" width="327" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0xI-sC-Gwy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyA-52-0N1">
-                                <rect key="frame" x="32" y="347" width="311" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyA-52-0N1">
+                                <rect key="frame" x="32" y="341" width="327" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="https://qianabarton.github.io/">
                                     <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -315,9 +490,11 @@ Orbital period:  Average surface temp: </string>
                                     <action selector="PortfolioLink:" destination="Zlo-Gg-pY2" eventType="touchUpInside" id="WRH-qc-ifu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uz-FK-AuX">
-                                <rect key="frame" x="32" y="447" width="343" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uz-FK-AuX">
+                                <rect key="frame" x="32" y="431" width="327" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="MAe-h9-Rbu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="https://github.com/qianabarton/Planets-iOS">
                                     <color key="titleColor" red="0.27840128539999998" green="0.75154161450000001" blue="0.69401887780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -328,11 +505,35 @@ Orbital period:  Average surface temp: </string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NVf-9V-uAQ" firstAttribute="leading" secondItem="VXF-6s-Snm" secondAttribute="leading" id="BJ7-cd-NN8"/>
+                            <constraint firstItem="VXF-6s-Snm" firstAttribute="leading" secondItem="cDY-XI-Sxk" secondAttribute="leading" id="Bv2-1V-oQh"/>
+                            <constraint firstItem="nRP-O4-Rd1" firstAttribute="top" secondItem="DyA-52-0N1" secondAttribute="bottom" constant="27" id="DdD-sx-Xix"/>
+                            <constraint firstItem="cDY-XI-Sxk" firstAttribute="leading" secondItem="DyA-52-0N1" secondAttribute="leading" id="Ifv-XW-r8c"/>
+                            <constraint firstItem="6Uz-FK-AuX" firstAttribute="trailing" secondItem="nRP-O4-Rd1" secondAttribute="trailing" id="PLa-9o-oOL"/>
+                            <constraint firstItem="6Uz-FK-AuX" firstAttribute="top" secondItem="DyA-52-0N1" secondAttribute="bottom" constant="57" id="Spe-4B-vaJ"/>
+                            <constraint firstItem="NVf-9V-uAQ" firstAttribute="trailing" secondItem="CYy-iy-h8K" secondAttribute="trailingMargin" id="UJi-6H-o4J"/>
+                            <constraint firstAttribute="trailing" secondItem="Mqr-Z3-nrO" secondAttribute="trailing" id="Uid-Ry-6zp"/>
+                            <constraint firstItem="NVf-9V-uAQ" firstAttribute="top" secondItem="wB4-dB-eLH" secondAttribute="bottom" constant="168" id="XCu-Si-twQ"/>
+                            <constraint firstItem="VXF-6s-Snm" firstAttribute="trailing" secondItem="cDY-XI-Sxk" secondAttribute="trailing" id="Xl6-EK-ckc"/>
+                            <constraint firstItem="6Uz-FK-AuX" firstAttribute="leading" secondItem="DyA-52-0N1" secondAttribute="leading" id="aF6-cX-xQA"/>
+                            <constraint firstItem="cDY-XI-Sxk" firstAttribute="trailing" secondItem="DyA-52-0N1" secondAttribute="trailing" id="byB-jW-Oka"/>
+                            <constraint firstItem="VXF-6s-Snm" firstAttribute="top" secondItem="NVf-9V-uAQ" secondAttribute="bottom" constant="1" id="dSg-jK-j89"/>
+                            <constraint firstItem="Mqr-Z3-nrO" firstAttribute="top" secondItem="CYy-iy-h8K" secondAttribute="top" id="jIA-OU-TFa"/>
+                            <constraint firstItem="6Uz-FK-AuX" firstAttribute="leading" secondItem="nRP-O4-Rd1" secondAttribute="leading" id="k8F-Tk-SOg"/>
+                            <constraint firstItem="6Uz-FK-AuX" firstAttribute="trailing" secondItem="DyA-52-0N1" secondAttribute="trailing" id="nSh-8D-66u"/>
+                            <constraint firstItem="cDY-XI-Sxk" firstAttribute="top" secondItem="VXF-6s-Snm" secondAttribute="bottom" constant="14" id="u9q-I7-XXQ"/>
+                            <constraint firstItem="DyA-52-0N1" firstAttribute="top" secondItem="cDY-XI-Sxk" secondAttribute="bottom" constant="3" id="uQg-N6-YlO"/>
+                            <constraint firstItem="Mqr-Z3-nrO" firstAttribute="leading" secondItem="CYy-iy-h8K" secondAttribute="leading" id="w5I-2F-L30"/>
+                            <constraint firstItem="NVf-9V-uAQ" firstAttribute="trailing" secondItem="VXF-6s-Snm" secondAttribute="trailing" id="xS4-AQ-79k"/>
+                            <constraint firstItem="NVf-9V-uAQ" firstAttribute="leading" secondItem="CYy-iy-h8K" secondAttribute="leadingMargin" constant="16" id="zun-iG-vDV"/>
+                            <constraint firstItem="VXF-6s-Snm" firstAttribute="top" secondItem="NVf-9V-uAQ" secondAttribute="bottom" constant="1" id="zyO-bm-H1N"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlZ-Kn-C68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701.60000000000002" y="28.335832083958024"/>
+            <point key="canvasLocation" x="1329.5" y="-9.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vpt-oA-Nls">
@@ -343,7 +544,10 @@ Orbital period:  Average surface temp: </string>
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -353,165 +557,11 @@ Orbital period:  Average surface temp: </string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkO-WA-A9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-738" y="31"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="WwK-PV-DAd">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jgL-8S-6mg" customClass="PageViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="b1J-Uc-ctt" kind="presentation" identifier="navigationSegue" modalTransitionStyle="crossDissolve" id="BK2-aM-cev"/>
-                    </connections>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AKW-ZG-us1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-558" y="791"/>
-        </scene>
-        <!--PageControl-->
-        <scene sceneID="ywU-Rn-ceI">
-            <objects>
-                <viewController title="PageControl" id="Bky-F3-ZEG" customClass="PageControl" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Rbv-j7-Mez"/>
-                        <viewControllerLayoutGuide type="bottom" id="ljs-bm-q8u"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VGt-ac-YhQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgz-1B-bOj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="jgL-8S-6mg" kind="embed" id="ghS-bO-ykO"/>
-                                </connections>
-                            </containerView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVX-jd-Nsb">
-                                <rect key="frame" x="0.0" y="606" width="375" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htn-8v-usg">
-                                        <rect key="frame" x="0.0" y="0.0" width="371" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="GET STARTED">
-                                            <color key="titleColor" red="0.63142877819999998" green="0.63141477109999999" blue="0.63141757249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickedGetStarted:" destination="Bky-F3-ZEG" eventType="touchUpInside" id="Alc-JF-1Zd"/>
-                                            <segue destination="b1J-Uc-ctt" kind="presentation" identifier="navigationSegue" modalTransitionStyle="crossDissolve" id="VZh-cK-iTw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.9535810596446701" green="0.9535810596446701" blue="0.9535810596446701" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="gxJ-2L-sYq">
-                                <rect key="frame" x="150" y="561" width="74" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="dots" destination="gxJ-2L-sYq" id="giZ-Bv-XwX"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6bO-Yo-pNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1218.4000000000001" y="787.55622188905556"/>
-        </scene>
-        <!--Welcome One View Controller-->
-        <scene sceneID="wz3-Tg-980">
-            <objects>
-                <viewController storyboardIdentifier="WelcomeOne" id="tFf-X4-y2p" customClass="WelcomeOneViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6iW-Nj-wHP"/>
-                        <viewControllerLayoutGuide type="bottom" id="edB-fq-FmY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nGP-vN-Ces">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planets-1" translatesAutoresizingMaskIntoConstraints="NO" id="O4K-cB-1VJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQh-cr-p0q" customClass="WelcomeOverlayView" customModule="Planets" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME TO PLANETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyb-JZ-vCo">
-                                <rect key="frame" x="68" y="295" width="239" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOUCH TO ROTATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZB-yZ-aFl">
-                                <rect key="frame" x="56" y="352" width="263" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="amD-IH-u98" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="105" y="788"/>
-        </scene>
-        <!--Welcome Two View Controller-->
-        <scene sceneID="XWS-RM-x3l">
-            <objects>
-                <viewController storyboardIdentifier="WelcomeTwo" id="aKo-wj-NVl" customClass="WelcomeTwoViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mwI-aY-eDO"/>
-                        <viewControllerLayoutGuide type="bottom" id="Acj-qo-vae"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Qci-Rz-Fz7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planets-2" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-Xr-bGq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmD-TQ-GgC" customClass="WelcomeOverlayView" customModule="Planets" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planet-circles" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-GM-FLR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OPEN THE MENU TO VIEW ANOTHER PLANET" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-zK-7Wl">
-                                <rect key="frame" x="158" y="178" width="200" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iCi-i0-WZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="818" y="788"/>
+            <point key="canvasLocation" x="-191" y="-9"/>
         </scene>
     </scenes>
     <resources>
         <image name="crown" width="450" height="450"/>
         <image name="menu_button_50" width="50" height="50"/>
-        <image name="planet-circles" width="750" height="1334"/>
-        <image name="planets-1" width="750" height="1334"/>
-        <image name="planets-2" width="750" height="1334"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="VZh-cK-iTw"/>
-    </inferredMetricsTieBreakers>
 </document>

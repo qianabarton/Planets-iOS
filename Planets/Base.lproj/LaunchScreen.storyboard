@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,24 +27,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trees_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-9m-T6d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-9m-T6d">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaN-4T-7jb">
-                                <rect key="frame" x="98" y="303" width="179" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="34"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rss-8n-c7g">
+                                <rect key="frame" x="169" y="424" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astronomic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaN-4T-7jb">
+                                <rect key="frame" x="39" y="302" width="296" height="62"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="28"/>
                                 <color key="textColor" red="0.92137928299492389" green="0.92137928299492389" blue="0.92137928299492389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rss-8n-c7g">
-                                <rect key="frame" x="169" y="424" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mz3-9m-T6d" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="1sX-cM-PQv"/>
+                            <constraint firstItem="mz3-9m-T6d" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="3uH-mM-EaU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rss-8n-c7g" secondAttribute="bottom" constant="206" id="Fc6-Ar-HuC"/>
+                            <constraint firstItem="mz3-9m-T6d" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HeA-pf-du3"/>
+                            <constraint firstItem="rss-8n-c7g" firstAttribute="top" secondItem="aaN-4T-7jb" secondAttribute="bottom" constant="60" id="K8L-pz-udn"/>
+                            <constraint firstAttribute="trailing" secondItem="mz3-9m-T6d" secondAttribute="trailing" id="R7T-VT-oxs"/>
+                            <constraint firstItem="aaN-4T-7jb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="23" id="V6E-8A-6tl"/>
+                            <constraint firstItem="mz3-9m-T6d" firstAttribute="centerX" secondItem="rss-8n-c7g" secondAttribute="centerX" id="ZJd-yO-16W"/>
+                            <constraint firstItem="mz3-9m-T6d" firstAttribute="centerX" secondItem="aaN-4T-7jb" secondAttribute="centerX" id="lzn-0A-HSH"/>
+                            <constraint firstItem="mz3-9m-T6d" firstAttribute="centerY" secondItem="aaN-4T-7jb" secondAttribute="centerY" id="mjX-xa-rO0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
