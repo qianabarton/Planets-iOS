@@ -57,9 +57,14 @@ class GameViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         
-        welcomeView.frame = CGRect(x: 0, y: 0, width: (parent?.view.frame.width)!, height: (parent?.view.frame.height)!)
-        self.view.addSubview(welcomeView)
+        if (!launchedBefore) {
+            // show the welcome view
+            welcomeView.frame = CGRect(x: 0, y: 0, width: (parent?.view.frame.width)!, height: (parent?.view.frame.height)!)
+            self.view.addSubview(welcomeView)
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
     }
     
     @IBAction func getStartedButtonClick(_ sender: UIButton) {
